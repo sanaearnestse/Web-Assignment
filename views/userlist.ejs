@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><u>User List</h1></u>
+    <ul>
+      <%
+        var list = '';
+        for (i = 0; i < userlist.length; i++) {
+          list += '<li><p href="mailto:' + userlist[i].email + '">' + userlist[i].username + '</p></li>';
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
